@@ -7,14 +7,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDate;
 import java.util.List;
 
-@Document(value = "ProduccionAcademica")
+@Document(value = "ProyectosColectivos")
 @Data
-public class ProduccionAcademica {
+public class ProyectosColectivos {
     @Id
     private String id;
-    private String tipo;
     private String titulo;
-    private LocalDate fecha;
+    private LocalDate fecha_inicio;
+    private LocalDate fecha_fin;
     private List<String> integrantes;
     private String id_usuario;
     private String ca;

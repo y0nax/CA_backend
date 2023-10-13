@@ -7,14 +7,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDate;
 import java.util.List;
 
-@Document(value = "ProduccionAcademica")
+@Document(value = "ActualizacionPE")
 @Data
-public class ProduccionAcademica {
+public class ActualizacionPE {
     @Id
     private String id;
-    private String tipo;
-    private String titulo;
+    private String nivel;
+    private String materia;
+    private String clave;
     private LocalDate fecha;
+    private String area;
     private List<String> integrantes;
     private String id_usuario;
     private String ca;

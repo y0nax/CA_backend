@@ -13,5 +13,6 @@ public class Minuta {
     private String id;
     private String tipo;
     private LocalDate fecha;
+    private String ca;
     private String path;
 }
