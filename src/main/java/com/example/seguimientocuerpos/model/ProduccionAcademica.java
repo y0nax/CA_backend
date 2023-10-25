@@ -17,6 +17,6 @@ public class ProduccionAcademica {
     private LocalDate fecha;
     private List<String> integrantes;
     private String id_usuario;
-    private String ca;
+    private String id_ca;
     private String path;
 }

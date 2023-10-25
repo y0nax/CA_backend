@@ -4,15 +4,15 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
+import java.util.List;
 
-@Document(value = "Minuta")
+@Document(value = "CuerpoAcademicio")
 @Data
-public class Minuta {
+public class CuerpoAcademico {
     @Id
     private String id;
-    private String tipo;
-    private LocalDate fecha;
-    private String id_ca;
-    private String path;
+    private String nombre;
+    private String descripcion;
+    private String lineas;
+    private String grado;
 }
