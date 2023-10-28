@@ -18,6 +18,6 @@ public class DireccionIndividual {
     private LocalDate fecha;
     private List<String> jurado;
     private String id_usuario;
-    private String ca;
+    private String id_ca;
     private String path;
 }

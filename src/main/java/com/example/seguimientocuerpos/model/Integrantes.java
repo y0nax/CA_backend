@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class Integrantes {
 
-    private String nombre;
-    private String ca;
+    private String id_usuario;
+    private String id_ca;
+
 }

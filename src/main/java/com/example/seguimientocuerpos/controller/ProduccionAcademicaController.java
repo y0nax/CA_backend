@@ -36,8 +36,7 @@ public class ProduccionAcademicaController {
         if(produccionAcademicaService.findById(id).get().getId_usuario().equals(id_usuario)) {
             produccionAcademicaService.deleteById(id);
             return new ResponseEntity<>(HttpStatus.OK);
-        }
-        else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
     }
 
     @PutMapping("/produccionAcademica/{id_usuario}")
@@ -45,7 +44,6 @@ public class ProduccionAcademicaController {
         if(produccionAcademicaService.findById(produccionAcademica.getId()).get().getId_usuario().equals(id_usuario)) {
             produccionAcademicaService.save(produccionAcademica);
             return new ResponseEntity<>(HttpStatus.OK);
-        }
-        else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
     }
 }

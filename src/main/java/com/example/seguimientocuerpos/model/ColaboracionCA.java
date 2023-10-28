@@ -17,5 +17,6 @@ public class ColaboracionCA {
     private LocalDate fecha_inicio;
     private LocalDate fecha_fin;
     private List<Integrantes> integrantes;
+    private String id_usuario;
     private String path;
 }

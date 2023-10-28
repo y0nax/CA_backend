@@ -14,6 +14,6 @@ public class Comprobante {
     private double monto;
     private String rubro;
     private LocalDate fecha;
-    private List<String> integrantes;
+    private List<Integrantes> integrantes;
     private String path;
 }

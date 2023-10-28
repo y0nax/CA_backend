@@ -15,7 +15,7 @@ public class ProduccionAcademica {
     private String tipo;
     private String titulo;
     private LocalDate fecha;
-    private List<String> integrantes;
+    private List<Integrantes> integrantes;
     private String id_usuario;
     private String id_ca;
     private String path;

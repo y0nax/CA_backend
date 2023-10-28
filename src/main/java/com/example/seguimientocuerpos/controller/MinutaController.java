@@ -38,7 +38,6 @@ public class MinutaController {
         if(usuarioService.findById(id_usuario).get().getRol().equals("LIDER")) {
             minutaService.deleteById(id);
             return new ResponseEntity<>(HttpStatus.OK);
-        }
-        else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
     }
 }

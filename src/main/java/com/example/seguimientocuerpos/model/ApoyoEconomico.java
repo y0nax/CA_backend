@@ -14,5 +14,6 @@ public class ApoyoEconomico {
     private double monto_total;
     private String periodo;
     private List<Comprobante> comprobanteList;
-    private String ca;
+    private String id_ca;
+    private String id_usuario;
 }
