@@ -17,7 +17,7 @@ public class DireccionIndividual {
     private String nombre;
     private LocalDate fecha;
     private List<String> jurado;
-    private String id_usuario;
-    private String id_ca;
+    private String idUsuario;
+    private String idCa;
     private String path;
 }

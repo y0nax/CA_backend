@@ -33,7 +33,7 @@ public class ProyectosColectivosController {
 
     @DeleteMapping("/proyectoColectivo/{id}/{id_usuario}")
     public ResponseEntity<Object> deleteById(@PathVariable String id, @PathVariable String id_usuario){
-        if(proyectosColectivosService.findById(id).get().getId_usuario().equals(id_usuario)){
+        if(proyectosColectivosService.findById(id).get().getIdUsuario().equals(id_usuario)){
             proyectosColectivosService.deleteById(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
@@ -41,7 +41,7 @@ public class ProyectosColectivosController {
 
     @PutMapping("/proyectoColectivo/{id_usuario}")
     public ResponseEntity<Object> update(@RequestBody ProyectosColectivos proyectosColectivos, @PathVariable String id_usuario){
-        if(proyectosColectivosService.findById(proyectosColectivos.getId()).get().getId_usuario().equals(id_usuario)){
+        if(proyectosColectivosService.findById(proyectosColectivos.getId()).get().getIdUsuario().equals(id_usuario)){
             proyectosColectivosService.save(proyectosColectivos);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);

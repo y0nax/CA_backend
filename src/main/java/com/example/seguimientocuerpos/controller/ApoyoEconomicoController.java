@@ -33,7 +33,7 @@ public class ApoyoEconomicoController {
 
     @DeleteMapping("/apoyoEconomico/{id}/{id_usuario}")
     public ResponseEntity<Object> deleteById(@PathVariable String id, @PathVariable String id_usuario){
-        if(apoyoEconomicoService.findById(id).get().getId_usuario().equals(id_usuario)){
+        if(apoyoEconomicoService.findById(id).get().getIdUsuario().equals(id_usuario)){
             apoyoEconomicoService.deleteById(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
@@ -41,7 +41,7 @@ public class ApoyoEconomicoController {
 
     @PutMapping("/apoyoEconomico/{id_usuario}")
     public ResponseEntity<Object> update(@RequestBody ApoyoEconomico apoyoEconomico, @PathVariable String id_usuario){
-        if(apoyoEconomicoService.findById(apoyoEconomico.getId()).get().getId_usuario().equals(id_usuario)){
+        if(apoyoEconomicoService.findById(apoyoEconomico.getId()).get().getIdUsuario().equals(id_usuario)){
             apoyoEconomicoService.save(apoyoEconomico);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);

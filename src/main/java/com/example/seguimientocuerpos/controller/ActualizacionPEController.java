@@ -33,7 +33,7 @@ public class ActualizacionPEController {
 
     @DeleteMapping("/actualizacionPE/{id}/{id_usuario}")
     public ResponseEntity<Object> deleteById(@PathVariable String id, @PathVariable String id_usuario){
-        if(actualizacionPEService.findById(id).get().getId_usuario().equals(id_usuario)){
+        if(actualizacionPEService.findById(id).get().getIdUsuario().equals(id_usuario)){
             actualizacionPEService.deleteById(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
@@ -41,7 +41,7 @@ public class ActualizacionPEController {
 
     @PutMapping("/actualizacionPE/{id_usuario}")
     public ResponseEntity<Object> update(@RequestBody ActualizacionPE actualizacionPE, @PathVariable String id_usuario){
-        if(actualizacionPEService.findById(actualizacionPE.getId()).get().getId_usuario().equals(id_usuario)){
+        if(actualizacionPEService.findById(actualizacionPE.getId()).get().getIdUsuario().equals(id_usuario)){
             actualizacionPEService.save(actualizacionPE);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);

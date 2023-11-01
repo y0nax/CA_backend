@@ -33,7 +33,7 @@ public class ColaboracionCAController {
 
     @DeleteMapping("/colaboracionCA/{id}/{id_usuario}")
     public ResponseEntity<Object> deleteById(@PathVariable String id, @PathVariable String id_usuario){
-        if(colaboracionCAService.findById(id).get().getId_usuario().equals(id_usuario)){
+        if(colaboracionCAService.findById(id).get().getIdUsuario().equals(id_usuario)){
             colaboracionCAService.deleteById(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
@@ -41,7 +41,7 @@ public class ColaboracionCAController {
 
     @PutMapping("/colaboracionCA/{id_usuario}")
     public ResponseEntity<Object> update(@RequestBody ColaboracionCA colaboracionCA, @PathVariable String id_usuario) {
-        if (colaboracionCAService.findById(colaboracionCA.getId()).get().getId_usuario().equals(id_usuario)) {
+        if (colaboracionCAService.findById(colaboracionCA.getId()).get().getIdUsuario().equals(id_usuario)) {
             colaboracionCAService.save(colaboracionCA);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);

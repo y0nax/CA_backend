@@ -28,4 +28,8 @@ public class MinutaService {
     public void deleteById(String id){
         minutaRepository.deleteById(id);
     }
+
+    public List<Minuta> findByTipo(String tipo){
+        return minutaRepository.findByTipo(tipo);
+    }
 }

@@ -4,7 +4,6 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Document(value = "ProduccionAcademica")
@@ -14,9 +13,9 @@ public class ProduccionAcademica {
     private String id;
     private String tipo;
     private String titulo;
-    private LocalDate fecha;
+    private String fecha;
     private List<Integrantes> integrantes;
-    private String id_usuario;
-    private String id_ca;
+    private String idUsuario;
+    private String idCa;
     private String path;
 }

@@ -14,7 +14,7 @@ public class CuerpoAcademicoController {
 
     private final CuerpoAcademicoService cuerpoAcademicoService;
 
-    @PostMapping("/cuepoAcademico")
+    @PostMapping("/cuerpoAcademico")
     public void save(@RequestBody CuerpoAcademico cuerpoAcademico){
         cuerpoAcademicoService.save(cuerpoAcademico);
     }

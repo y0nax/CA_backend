@@ -18,7 +18,7 @@ public class ActualizacionPE {
     private LocalDate fecha;
     private String area;
     private List<Integrantes> integrantes;
-    private String id_usuario;
-    private String id_ca;
+    private String idUsuario;
+    private String idCa;
     private String path;
 }

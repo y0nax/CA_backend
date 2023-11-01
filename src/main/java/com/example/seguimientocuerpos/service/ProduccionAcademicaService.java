@@ -29,4 +29,16 @@ public class ProduccionAcademicaService {
     public void deleteById(String id){
         produccionAcademicaRepository.deleteById(id);
     }
+
+    public List<ProduccionAcademica> findByAnio(String anio){
+        return produccionAcademicaRepository.findByAnio(anio);
+    }
+
+    public List<ProduccionAcademica> findByIntegrantesIdUsuario(String id_usuario){
+        return produccionAcademicaRepository.findByIntegrantesIdUsuario(id_usuario);
+    }
+
+    public List<ProduccionAcademica> findByTipo(String tipo){
+        return produccionAcademicaRepository.findByTipo(tipo);
+    }
 }

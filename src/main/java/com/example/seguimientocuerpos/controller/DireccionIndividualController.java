@@ -33,7 +33,7 @@ public class DireccionIndividualController {
 
     @DeleteMapping("/direccionIndividual/{id}/{id_usuario}")
     public ResponseEntity<Object> deleteById(@PathVariable String id, @PathVariable String id_usuario){
-        if(direccionIndividualService.findById(id).get().getId_usuario().equals(id_usuario)){
+        if(direccionIndividualService.findById(id).get().getIdUsuario().equals(id_usuario)){
             direccionIndividualService.deleteById(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
@@ -41,7 +41,7 @@ public class DireccionIndividualController {
 
     @PutMapping("/direccionIndividual/{id_usuario}")
     public ResponseEntity<Object> update(@RequestBody DireccionIndividual direccionIndividual, @PathVariable String id_usuario){
-        if(direccionIndividualService.findById(direccionIndividual.getId()).get().getId_usuario().equals(id_usuario)){
+        if(direccionIndividualService.findById(direccionIndividual.getId()).get().getIdUsuario().equals(id_usuario)){
             direccionIndividualService.save(direccionIndividual);
             return new ResponseEntity<>(HttpStatus.OK);
         } else return new ResponseEntity<>(HttpStatus.FORBIDDEN);
