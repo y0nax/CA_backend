@@ -13,8 +13,8 @@ public class ProyectosColectivos {
     @Id
     private String id;
     private String titulo;
-    private LocalDate fecha_inicio;
-    private LocalDate fecha_fin;
+    private String fechaInicio;
+    private String fechaFin;
     private List<Integrantes> integrantes;
     private String idUsuario;
     private String idCa;

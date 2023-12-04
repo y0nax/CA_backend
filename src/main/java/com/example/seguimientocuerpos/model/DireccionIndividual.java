@@ -15,7 +15,7 @@ public class DireccionIndividual {
     private String nivel;
     private String titulo;
     private String nombre;
-    private LocalDate fecha;
+    private String fecha;
     private List<String> jurado;
     private String idUsuario;
     private String idCa;

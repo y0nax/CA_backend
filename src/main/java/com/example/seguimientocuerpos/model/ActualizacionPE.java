@@ -15,7 +15,7 @@ public class ActualizacionPE {
     private String nivel;
     private String materia;
     private String clave;
-    private LocalDate fecha;
+    private String fecha;
     private String area;
     private List<Integrantes> integrantes;
     private String idUsuario;

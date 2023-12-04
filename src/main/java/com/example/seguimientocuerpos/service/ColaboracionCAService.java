@@ -29,4 +29,16 @@ public class ColaboracionCAService {
     public void deleteById(String id){
         colaboracionCARepository.deleteById(id);
     }
+
+    public List<ColaboracionCA> findByAnio(String anio){
+        return colaboracionCARepository.findByAnio(anio);
+    }
+
+    public List<ColaboracionCA> findByTipo(String tipo){
+        return colaboracionCARepository.findByTipo(tipo);
+    }
+
+    public List<ColaboracionCA> findByIntegrantesIdCa(String idCa){
+        return colaboracionCARepository.findByIntegrantesIdCa(idCa);
+    }
 }

@@ -31,6 +31,27 @@ public class DireccionIndividualController {
         return direccionIndividualService.findById(id).get();
     }
 
+    @GetMapping("/direccionIndividualA/{anio}")
+    public ResponseEntity<Object> findByFecha(@PathVariable String anio){
+        if(direccionIndividualService.findByAnio(anio).size()>0)
+            return new ResponseEntity<>(direccionIndividualService.findByAnio(anio), HttpStatus.OK);
+        else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping("/direccionIndividualN/{nivel}")
+    public ResponseEntity<Object> findByNivel(@PathVariable String nivel){
+        if(direccionIndividualService.findByNivel(nivel).size()>0)
+            return new ResponseEntity<>(direccionIndividualService.findByNivel(nivel), HttpStatus.OK);
+        else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping("/direccionIndividualI/{idCa}")
+    public ResponseEntity<Object> findByIntegrantesCa(@PathVariable String idCa){
+        if(direccionIndividualService.findByIdCa(idCa).size()>0)
+            return new ResponseEntity<>(direccionIndividualService.findByIdCa(idCa), HttpStatus.OK);
+        else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
     @DeleteMapping("/direccionIndividual/{id}/{id_usuario}")
     public ResponseEntity<Object> deleteById(@PathVariable String id, @PathVariable String id_usuario){
         if(direccionIndividualService.findById(id).get().getIdUsuario().equals(id_usuario)){

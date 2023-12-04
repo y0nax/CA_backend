@@ -14,8 +14,8 @@ public class ColaboracionCA {
     private String id;
     private String tipo;
     private String titulo;
-    private LocalDate fecha_inicio;
-    private LocalDate fecha_fin;
+    private String fechaInicio;
+    private String fechaFin;
     private List<Integrantes> integrantes;
     private String idUsuario;
     private String path;

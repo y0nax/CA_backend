@@ -11,6 +11,7 @@ import java.util.List;
 public interface ProduccionAcademicaRepository extends MongoRepository<ProduccionAcademica,String> {
     @Query("{ 'fecha' : { $regex: ?0 } }")
     List <ProduccionAcademica> findByAnio(String anio);
+
     List<ProduccionAcademica> findByIntegrantesIdUsuario (String idUsuario);
 
     List <ProduccionAcademica> findByTipo (String tipo);

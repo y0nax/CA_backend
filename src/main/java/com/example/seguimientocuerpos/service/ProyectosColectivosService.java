@@ -29,4 +29,16 @@ public class ProyectosColectivosService {
     public void deleteById(String id){
         proyectosColectivosRepository.deleteById(id);
     }
+
+    public List<ProyectosColectivos> findByAnio(String anio){
+        return proyectosColectivosRepository.findByAnio(anio);
+    }
+
+    public List<ProyectosColectivos> findByIntegrantesIdUsuario(String idUsuario){
+        return proyectosColectivosRepository.findByIntegrantesIdUsuario(idUsuario);
+    }
+
+    public List<ProyectosColectivos> findByIdCa(String idCa){
+        return proyectosColectivosRepository.findByIdCa(idCa);
+    }
 }

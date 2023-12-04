@@ -29,4 +29,16 @@ public class DireccionIndividualService {
     public void deleteById(String id){
         direccionIndividualRepository.deleteById(id);
     }
+
+    public List<DireccionIndividual> findByAnio(String anio){
+        return direccionIndividualRepository.findByAnio(anio);
+    }
+
+    public List<DireccionIndividual> findByIdCa(String idCa){
+        return direccionIndividualRepository.findByIdCa(idCa);
+    }
+
+    public List<DireccionIndividual> findByNivel(String nivel){
+        return direccionIndividualRepository.findByNivel(nivel);
+    }
 }

@@ -11,8 +11,10 @@ import java.util.List;
 public class ApoyoEconomico {
     @Id
     private String id;
-    private double monto_total;
-    private String periodo;
+    private double montoTotal;
+    private String periodoInicio;
+    private String periodoFin;
+    private List<IntegranteMonto> montoUsuario;
     private List<Comprobante> comprobanteList;
     private String idCa;
     private String idUsuario;
